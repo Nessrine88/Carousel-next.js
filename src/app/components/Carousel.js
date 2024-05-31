@@ -45,7 +45,7 @@ const Carousel = ({ slides }) => {
             className={`cursor-pointer mx-1 ${index === current ? "opacity-100" : "opacity-50"}`}
             onClick={() => setCurrent(index)}
           >
-            <img src={slide} alt={`Slide ${index}`} className="w-8 h-8 object-cover " />
+            <img src={slide} alt={`Slide ${index}`} className="w-[100px]  object-cover " />
           </div>
         ))}
       </div>
