@@ -5,7 +5,8 @@ import { useState } from 'react';
 const Carousel = ({ slides }) => {
   const [current, setCurrent] = useState(0);
 
-  const previousSlide = () => {
+  const previousSlide = (e) => {
+       e.stopPropagation(); 
     if (current === 0) {
       setCurrent(slides.length - 1);
     } else {
@@ -13,7 +14,8 @@ const Carousel = ({ slides }) => {
     }
   };
 
-  const nextSlide = () => {
+  const nextSlide = (e) => {
+       e.stopPropagation(); 
     if (current === slides.length - 1) {
       setCurrent(0);
     } else {
