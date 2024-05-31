@@ -29,12 +29,12 @@ const Carousel = ({ slides }) => {
             <img key={index} src={slide} alt={`Slide ${index}`} className="w-full" />
           ))}
         </div>
-        <div className="absolute top-0 left-0 right-0 flex justify-between items-center px-5">
+        <div className="absolute top-[50%] left-0 right-0 flex justify-between items-center px-5 text-[50px] text-white">
           <button onClick={previousSlide}>
-            <i className="fa-solid fa-circle-arrow-left"></i>
+            <i class="fa-solid fa-chevron-left"></i>
           </button>
           <button onClick={nextSlide}>
-            <i className="fa-solid fa-circle-arrow-right"></i>
+           <i class="fa-solid fa-chevron-right"></i>
           </button>
         </div>
       </div>

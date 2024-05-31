@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from "./components/Carousel";
-
+import Navbar from './components/Navbar';
 export default function Home() {
   let slides = [
     './images/image1.jpg',
@@ -15,8 +15,13 @@ export default function Home() {
   ];
 
   return (
+    <>
+    <Navbar />
     <div className='w-[60%] m-auto pt-11'>
+    
       <Carousel slides={slides} />
+     
     </div>
+    </>
   );
 }
