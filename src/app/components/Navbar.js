@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className='bg-red-600 w-full h-[100px] p-auto'>
          <div>
-      <ul className='pl-5  absolute text-[12px]  top-0 right-0 flex  items center rounded-bl-[42px] rounded-br-[42px] bg-red-900 text-white gap-5 mr-5'>
+      <ul className='pl-5  absolute text-[16px]  top-0 right-0 flex  items center rounded-bl-[42px] rounded-br-[42px] bg-red-900 text-white gap-5 mr-5'>
         <li className='py-3'><a>About</a></li>
         <li className='px-3 py-3'><a>Contact</a></li>
         <li className='bg-black w-full px-5 py-3 rounded-br-[42px]'>
