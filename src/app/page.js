@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState } from 'react';
 import Carousel from './components/Carousel';
@@ -20,11 +19,13 @@ export default function Home() {
     '/images/image7.jpg',
   ];
 
-  const handlePopup = () => {
+  const handlePopup = (e) => {
+    e.stopPropagation(); // Ensure the event does not bubble up
     setIsPopupVisible(true);
   };
 
-  const closePopup = () => {
+  const closePopup = (e) => {
+    e.stopPropagation();
     setIsPopupVisible(false);
   };
 
@@ -35,15 +36,15 @@ export default function Home() {
         <div className='w-[40%] h-full'>
           <Infos />
         </div>
-        <div onClick={handlePopup} className='w-[60%] h-full'>
-          <Carousel slides={slides} />
+        <div className='w-[60%] h-full'>
+          <Carousel slides={slides} onSlideClick={handlePopup} />
         </div>
       </div>
       
       {isPopupVisible && (
-        <div className='fixed inset-0 bg-black flex items-center justify-center z-50 '>
-          <div className=' p-5 rounded-lg'>
-            <button onClick={closePopup} className='absolute top-2 right-2 text-white'>
+        <div className='fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50' onClick={closePopup}>
+          <div className='bg-white p-5 rounded-lg relative' onClick={(e) => e.stopPropagation()}>
+            <button onClick={closePopup} className='absolute top-2 right-2 text-black'>
               <i className="fa-solid fa-times"></i>
             </button>
             <div className='w-[60%] h-[60%] mx-auto'>
